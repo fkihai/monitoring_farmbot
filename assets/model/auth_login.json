@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "data": {
+    "existingUser": {
+      "id": 1,
+      "name": "Fikri haikal",
+      "email": "fikrihaikal568@gmail.com",
+      "password": "haikal123",
+      "createdAt": "2023-07-09T08:35:33.000Z",
+      "updatedAt": "2023-07-09T08:35:33.000Z"
+    },
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpa3JpaGFpa2FsNTY4QGdtYWlsLmNvbSIsImlhdCI6MTY5MDAwMDgzMiwiZXhwIjoxNjkwMDA0NDMyfQ.GFB3eNQUwS3V_OvzuCeZLuJNrOqOYOFThmecXcIJtxw"
+  }
+}

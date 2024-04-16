@@ -1,0 +1,122 @@
+[
+  {
+    "id_plant": 1,
+    "name": "selada",
+    "weight": 50,
+    "pixel": 150
+  },
+  {
+    "id_plant": 2,
+    "name": "selada",
+    "weight": 55,
+    "pixel": 145
+  },
+  {
+    "id_plant": 3,
+    "name": "selada",
+    "weight": 48,
+    "pixel": 155
+  },
+  {
+    "id_plant": 4,
+    "name": "selada",
+    "weight": 52,
+    "pixel": 152
+  },
+  {
+    "id_plant": 5,
+    "name": "selada",
+    "weight": 60,
+    "pixel": 160
+  },
+  {
+    "id_plant": 6,
+    "name": "selada",
+    "weight": 45,
+    "pixel": 148
+  },
+  {
+    "id_plant": 7,
+    "name": "selada",
+    "weight": 53,
+    "pixel": 158
+  },
+  {
+    "id_plant": 8,
+    "name": "selada",
+    "weight": 58,
+    "pixel": 142
+  },
+  {
+    "id_plant": 9,
+    "name": "selada",
+    "weight": 47,
+    "pixel": 156
+  },
+  {
+    "id_plant": 10,
+    "name": "selada",
+    "weight": 49,
+    "pixel": 149
+  },
+  {
+    "id_plant": 11,
+    "name": "selada",
+    "weight": 57,
+    "pixel": 157
+  },
+  {
+    "id_plant": 12,
+    "name": "selada",
+    "weight": 46,
+    "pixel": 147
+  },
+  {
+    "id_plant": 13,
+    "name": "selada",
+    "weight": 51,
+    "pixel": 153
+  },
+  {
+    "id_plant": 14,
+    "name": "selada",
+    "weight": 54,
+    "pixel": 146
+  },
+  {
+    "id_plant": 15,
+    "name": "selada",
+    "weight": 56,
+    "pixel": 154
+  },
+  {
+    "id_plant": 16,
+    "name": "selada",
+    "weight": 59,
+    "pixel": 159
+  },
+  {
+    "id_plant": 17,
+    "name": "selada",
+    "weight": 48,
+    "pixel": 143
+  },
+  {
+    "id_plant": 18,
+    "name": "selada",
+    "weight": 50,
+    "pixel": 157
+  },
+  {
+    "id_plant": 19,
+    "name": "selada",
+    "weight": 55,
+    "pixel": 152
+  },
+  {
+    "id_plant": 20,
+    "name": "selada",
+    "weight": 53,
+    "pixel": 148
+  }
+]

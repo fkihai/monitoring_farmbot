@@ -1,0 +1,13 @@
+{
+  "message": "success",
+  "data": {
+    "id": 639,
+    "attributes": {
+      "id_plant": 19,
+      "name": "selada",
+      "weight": 0,
+      "pixel": 0,
+      "date": "2023-09-03T23:00:36.000Z"
+    }
+  }
+}
