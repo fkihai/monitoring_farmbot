@@ -10,6 +10,7 @@ class ProfileView extends GetView<ProfileController> {
   const ProfileView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final SizeConfig sizeConfig = SizeConfig(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -22,28 +23,26 @@ class ProfileView extends GetView<ProfileController> {
         child: Obx(
           () => Padding(
             padding: EdgeInsets.only(
-                top: getProportionateScreenHeight(140),
-                bottom: getProportionateScreenHeight(20)),
+                top: sizeConfig.getProportionateScreenHeight(140),
+                bottom: sizeConfig.getProportionateScreenHeight(20)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  radius: getProportionateScreenWidth(90),
+                  radius: sizeConfig.getProportionateScreenWidth(90),
                   child: Text(
                     controller.name.value.toUpperCase(),
-                    style: TextStyle(
-                        fontSize: getProportionateTextScale(80),
-                        color: Colors.white),
+                    style: const TextStyle(fontSize: 80, color: Colors.white),
                   ),
                 ),
-                SizedBox(height: getProportionateScreenHeight(20)),
+                SizedBox(height: sizeConfig.getProportionateScreenHeight(20)),
                 Text(
                   controller.fullname.value,
-                  style: TextStyle(
-                    fontSize: getProportionateTextScale(30),
+                  style: const TextStyle(
+                    fontSize: 30,
                   ),
                 ),
-                SizedBox(height: getProportionateScreenHeight(20)),
+                SizedBox(height: sizeConfig.getProportionateScreenHeight(20)),
                 InkWell(
                   onTap: () {
                     controller.doLogout();

@@ -12,6 +12,7 @@ class DetailView extends GetView<DetailController> {
   const DetailView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final SizeConfig sizeConfig = SizeConfig(context);
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -23,7 +24,7 @@ class DetailView extends GetView<DetailController> {
             child: const Icon(Icons.history),
           ),
           SizedBox(
-            width: getProportionateScreenWidth(20),
+            width: sizeConfig.getProportionateScreenWidth(20),
           ),
         ],
         title: const Text(
@@ -34,20 +35,20 @@ class DetailView extends GetView<DetailController> {
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: getProportionateScreenWidth(25),
-          vertical: getProportionateScreenHeight(20),
+          horizontal: sizeConfig.getProportionateScreenWidth(25),
+          vertical: sizeConfig.getProportionateScreenHeight(20),
         ),
         child: Obx(
           () => Column(
             children: [
-              SizedBox(height: getProportionateScreenHeight(50)),
+              SizedBox(height: sizeConfig.getProportionateScreenHeight(50)),
               Center(
                 child: Image.asset(
                   'assets/img/lettuceDetail.png',
-                  width: getProportionateScreenWidth(250),
+                  width: sizeConfig.getProportionateScreenWidth(250),
                 ),
               ),
-              SizedBox(height: getProportionateScreenHeight(60)),
+              SizedBox(height: sizeConfig.getProportionateScreenHeight(60)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -60,7 +61,8 @@ class DetailView extends GetView<DetailController> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(height: getProportionateScreenHeight(15)),
+                      SizedBox(
+                          height: sizeConfig.getProportionateScreenHeight(15)),
                       BarIndicator(
                         value: controller.pixel.value,
                         percent: controller.percentPixel.value,
@@ -79,7 +81,8 @@ class DetailView extends GetView<DetailController> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(height: getProportionateScreenHeight(15)),
+                      SizedBox(
+                          height: sizeConfig.getProportionateScreenHeight(15)),
                       BarIndicator(
                         value: controller.weight.value,
                         percent: controller.percentWeight.value,
@@ -90,7 +93,7 @@ class DetailView extends GetView<DetailController> {
                   ),
                 ],
               ),
-              SizedBox(height: getProportionateScreenHeight(40)),
+              SizedBox(height: sizeConfig.getProportionateScreenHeight(40)),
               Row(
                 children: [
                   Column(
@@ -99,7 +102,8 @@ class DetailView extends GetView<DetailController> {
                         'plant id',
                         style: TextStyle(fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(height: getProportionateScreenHeight(10)),
+                      SizedBox(
+                          height: sizeConfig.getProportionateScreenHeight(10)),
                       Text('${controller.id.value}')
                     ],
                   ),
@@ -110,7 +114,8 @@ class DetailView extends GetView<DetailController> {
                         'plant type',
                         style: TextStyle(fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(height: getProportionateScreenHeight(10)),
+                      SizedBox(
+                          height: sizeConfig.getProportionateScreenHeight(10)),
                       Text(controller.name.value)
                     ],
                   ),
@@ -121,7 +126,8 @@ class DetailView extends GetView<DetailController> {
                         'plant update',
                         style: TextStyle(fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(height: getProportionateScreenHeight(10)),
+                      SizedBox(
+                          height: sizeConfig.getProportionateScreenHeight(10)),
                       Text(controller.updated.value),
                     ],
                   )

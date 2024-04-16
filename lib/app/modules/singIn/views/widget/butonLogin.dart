@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../constant/size_config.dart';
 import '../../controllers/singin_controller.dart';
 
 class ButtonLogin extends GetView<SinginController> {
@@ -10,7 +9,7 @@ class ButtonLogin extends GetView<SinginController> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: getProportionateScreenHeight(45),
+      height: 45,
       decoration: BoxDecoration(
         color: Colors.green[300],
         shape: BoxShape.rectangle,
@@ -20,11 +19,11 @@ class ButtonLogin extends GetView<SinginController> {
         onPressed: () async {
           controller.doLogin();
         },
-        child: Text(
+        child: const Text(
           'Login',
           style: TextStyle(
             color: Colors.white,
-            fontSize: getProportionateTextScale(16),
+            fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
         ),

@@ -11,6 +11,7 @@ class ImagePageView extends GetView<ImagePageController> {
   const ImagePageView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final SizeConfig sizeConfig = SizeConfig(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -21,10 +22,10 @@ class ImagePageView extends GetView<ImagePageController> {
       ),
       body: Padding(
         padding: EdgeInsets.only(
-            top: getProportionateScreenHeight(30),
-            bottom: getProportionateScreenHeight(20),
-            left: getProportionateScreenWidth(15),
-            right: getProportionateScreenWidth(15)),
+            top: sizeConfig.getProportionateScreenHeight(30),
+            bottom: sizeConfig.getProportionateScreenHeight(20),
+            left: sizeConfig.getProportionateScreenWidth(15),
+            right: sizeConfig.getProportionateScreenWidth(15)),
         child: Obx(
           () => Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,8 +34,8 @@ class ImagePageView extends GetView<ImagePageController> {
                 children: [
                   Container(
                     padding: EdgeInsets.symmetric(
-                      horizontal: getProportionateScreenHeight(10),
-                      vertical: getProportionateScreenWidth(10),
+                      horizontal: sizeConfig.getProportionateScreenHeight(10),
+                      vertical: sizeConfig.getProportionateScreenWidth(10),
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
@@ -52,7 +53,7 @@ class ImagePageView extends GetView<ImagePageController> {
                   const Spacer(),
                 ],
               ),
-              SizedBox(height: getProportionateScreenHeight(20)),
+              SizedBox(height: sizeConfig.getProportionateScreenHeight(20)),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Center(
@@ -61,7 +62,7 @@ class ImagePageView extends GetView<ImagePageController> {
                   ),
                 ),
               ),
-              SizedBox(height: getProportionateScreenHeight(30)),
+              SizedBox(height: sizeConfig.getProportionateScreenHeight(30)),
               const Spacer(),
               const LogoBottom(),
             ],

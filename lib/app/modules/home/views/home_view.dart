@@ -11,6 +11,7 @@ class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final SizeConfig sizeConfig = SizeConfig(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -22,7 +23,7 @@ class HomeView extends GetView<HomeController> {
                 Get.toNamed(Routes.PROFILE);
               },
               child: CircleAvatar(
-                radius: getProportionateScreenWidth(20),
+                radius: sizeConfig.getProportionateScreenWidth(20),
                 child: Obx(
                   () => Text(
                     controller.name.value.toUpperCase(),
@@ -49,22 +50,22 @@ class HomeView extends GetView<HomeController> {
             ),
           ),
           SizedBox(
-            width: getProportionateScreenWidth(20),
+            width: sizeConfig.getProportionateScreenWidth(20),
           ),
         ],
       ),
       body: Padding(
-        padding:
-            EdgeInsets.symmetric(vertical: getProportionateScreenHeight(20)),
+        padding: EdgeInsets.symmetric(
+            vertical: sizeConfig.getProportionateScreenHeight(20)),
         child: Column(
           children: [
             Expanded(
               child: Center(
                 child: Padding(
                   padding: EdgeInsets.only(
-                    right: getProportionateScreenWidth(25),
-                    left: getProportionateScreenWidth(25),
-                    top: getProportionateScreenHeight(60),
+                    right: sizeConfig.getProportionateScreenWidth(25),
+                    left: sizeConfig.getProportionateScreenWidth(25),
+                    top: sizeConfig.getProportionateScreenHeight(60),
                   ),
                   child: Obx(
                     () => GridView.builder(

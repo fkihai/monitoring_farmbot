@@ -7,12 +7,13 @@ class LogoBottom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final SizeConfig sizeConfig = SizeConfig(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
           'assets/img/logo.png',
-          width: getProportionateScreenWidth(30),
+          width: sizeConfig.getProportionateScreenWidth(30),
         ),
         const Text(
           ' Farming Bot',

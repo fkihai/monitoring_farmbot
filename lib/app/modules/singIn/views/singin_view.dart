@@ -15,54 +15,61 @@ class SinginView extends GetView<SinginController> {
   @override
   Widget build(BuildContext context) {
     final SizeConfig sizeConfig = SizeConfig(context);
-
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Obx(
-        () => SafeArea(
-          child: Stack(
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(25),
-                    vertical: getProportionateScreenHeight(20)),
-                child: Column(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 25,
+            vertical: 20,
+          ),
+          child: Obx(
+            () => Stack(
+              children: [
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.asset(
                       'assets/img/logo.png',
-                      width: getProportionateScreenWidth(50),
+                      width: 50,
                     ),
-                    SizedBox(height: getProportionateScreenHeight(50)),
-                    Text(
+                    SizedBox(
+                        height: sizeConfig.getProportionateScreenHeight(50)),
+                    const Text(
                       "Welcome back. \nLet's check your plants",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: getProportionateTextScale(20)),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
                     ),
-                    SizedBox(height: getProportionateScreenHeight(100)),
+                    SizedBox(
+                        height: sizeConfig.getProportionateScreenHeight(100)),
                     controller.isloginFailed.value
-                        ? Text(
+                        ? const Text(
                             'Login Failed. Check your email and password',
                             style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: getProportionateTextScale(12),
-                                color: Colors.red),
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: Colors.red,
+                            ),
                           )
                         : Container(),
-                    SizedBox(height: getProportionateScreenHeight(10)),
+                    SizedBox(
+                        height: sizeConfig.getProportionateScreenHeight(10)),
                     const EmailField(),
-                    SizedBox(height: getProportionateScreenHeight(20)),
+                    SizedBox(
+                        height: sizeConfig.getProportionateScreenHeight(20)),
                     const PasswordField(),
-                    SizedBox(height: getProportionateScreenHeight(70)),
+                    SizedBox(
+                        height: sizeConfig.getProportionateScreenHeight(70)),
                     const ButtonLogin(),
                     const Spacer(),
                     const LogoBottom(),
                   ],
                 ),
-              ),
-              controller.isLoading.value ? const LoadingBaground() : Container()
-            ],
+                controller.isLoading.value
+                    ? const LoadingBaground()
+                    : Container()
+              ],
+            ),
           ),
         ),
       ),

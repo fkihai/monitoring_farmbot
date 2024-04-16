@@ -19,8 +19,9 @@ class BarIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final SizeConfig sizeConfig = SizeConfig(context);
     return CircularPercentIndicator(
-      radius: getProportionateScreenWidth(75),
+      radius: sizeConfig.getProportionateScreenWidth(75),
       startAngle: 270,
       animation: true,
       lineWidth: 20,
