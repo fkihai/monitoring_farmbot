@@ -29,7 +29,6 @@ class HomeController extends GetxController {
     if (result != null) {
       dataPlants.assignAll(result.data!);
       updated.value = "25/09/2023";
-      // updated.value = dataPlants.value[0].attributes.updated.toString();
     }
   }
 

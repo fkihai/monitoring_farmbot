@@ -1,4 +1,4 @@
-package com.example.monitoring_farmbot
+package com.haikaldev.farmbot
 
 import io.flutter.embedding.android.FlutterActivity
 
