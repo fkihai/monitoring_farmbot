@@ -1,6 +1,11 @@
 # monitoring_farmbot
 
-A new Flutter project.
+Flutter Version : 3.19.5
+
+ # AUTH
+
+ email : admin@gmail.com
+ pass  : admin123
 
 ## Getting Started
 
